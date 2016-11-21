@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Broadcast Receiver</string>
     <string name="txt_password">Password</string>
+    <string name="txt_time_in_seconds">Time (in seconds)</string>
+    <string name="txt_add_config">Add Config</string>
+    <string name="txt_example_3600">Example: 3600</string>
 </resources>

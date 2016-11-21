@@ -7,38 +7,34 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.cauealmeida.broadcastreceiver.MainActivity">
+    tools:context="com.cauealmeida.broadcastreceiver.AlarmActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/txt_time_in_seconds"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
+        android:inputType="time"
         android:ems="10"
-        android:id="@+id/editText"
-        android:layout_alignParentTop="true"
-        android:hint="@string/txt_password"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign In"
-        android:id="@+id/btnSignIn"
-        android:clickable="true"
-        android:onClick="doSignIn"
-        android:layout_below="@+id/editText"
+        android:id="@+id/edtTime"
+        android:hint="@string/txt_example_3600"
+        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
     <Button
-        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send"
-        android:id="@+id/btnOrder"
+        android:text="@string/txt_add_config"
+        android:id="@+id/btnConfig"
         android:clickable="true"
-        android:onClick="doSend"
-        android:layout_below="@+id/btnSignIn"
+        android:onClick="doConfig"
+        android:layout_below="@+id/edtTime"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

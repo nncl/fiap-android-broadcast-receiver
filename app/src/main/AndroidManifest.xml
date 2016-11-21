@@ -11,27 +11,41 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".AlarmActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        .
         <receiver android:name=".receiver.MyReceiver">
             <intent-filter>
-                <action android:name="android.app.action.ACTION_PASSWORD_SUCCEEDED"></action>
+                <action android:name="android.app.action.ACTION_PASSWORD_SUCCEEDED" />
             </intent-filter>
         </receiver>
 
         <!-- Until Marshmellow version the following code is required -->
-        <receiver android:name=".receiver.MySMSReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE" />
-                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+        <receiver android:name=".receiver.MyOrderedReceiver1">
+            <intent-filter android:priority="1">
+
+                <!-- example name, coulb be w our package name, etc. -->
+                <action android:name="orderedbroadcast" />
             </intent-filter>
         </receiver>
+
+        <receiver android:name=".receiver.MyOrderedReceiver2">
+            <intent-filter android:priority="2">
+
+                <!-- CHECK THAT IT'S THE SAME -->
+                <!-- How will we decided execution priority? -->
+                <action android:name="orderedbroadcast" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiver.AlarmReceiver" /> <!-- Says there is no action because of PENDING INTENT -->
+
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
