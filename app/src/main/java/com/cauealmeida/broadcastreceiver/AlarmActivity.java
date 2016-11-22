@@ -46,6 +46,15 @@ public class AlarmActivity extends AppCompatActivity {
             alarmManager.set(AlarmManager.RTC_WAKEUP,
                     System.currentTimeMillis() + (t * 1000),
                     pendingIntent);
+            /*
+            alarmManager.setInexactRepeating(
+                    AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                    10,
+                    10, pendingIntent
+            );
+
+            https://developer.android.com/training/scheduling/alarms.html#set
+            */
 
             Toast.makeText(this, "Time successfully configured to " + t + " seconds from now",
                     Toast.LENGTH_SHORT).show();
