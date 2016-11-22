@@ -6,3 +6,5 @@ Class about Broadcast Receiver. Please follow PDF file, which is not here hehe
 - SMS
   - Priorities \o/
 - AlarmManager
+- https://developer.android.com/training/scheduling/alarms.html#set
+- Notification
