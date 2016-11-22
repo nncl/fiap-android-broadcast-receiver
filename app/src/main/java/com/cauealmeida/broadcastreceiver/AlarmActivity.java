@@ -41,7 +41,7 @@ public class AlarmActivity extends AppCompatActivity {
             );
 
             // currentTimeMillis = device time at the moment
-            // Every x time shoot PI
+            // Will show message after x time
             AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
             alarmManager.set(AlarmManager.RTC_WAKEUP,
                     System.currentTimeMillis() + (t * 1000),
